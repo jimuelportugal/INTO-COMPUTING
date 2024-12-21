@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+  <link rel="stylesheet" href="../css/responsive.css" type="text/css"/>
+  <title>Menu - Frost Shake</title>
+</head>
+<body>
+  <div class="header">
+    <a href="index.html" class="logo">FROST SHAKE</a>
+    <div class="header-right">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="active" href="menu.html">Menu</a>
+    </div>
+  </div>
+
+  <div style="padding-left:20px; padding-top:20px">
+    <section id="menu">
+      <h1><u>Our Shakes Menu</u></h1>
+
+      <div id="step1">
+        <form id="shakeForm">
+          <table>
+            <tr>
+              <th>Select</th>
+              <th>Shake</th>
+              <th>Image & Description</th>
+              <th>Price</th>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox" name="shake" value="Ocean Breeze Shake" data-price="150"></td>
+              <td>Ocean Breeze Shake</td>
+              <td>
+                <img src="../css/IMAGES/ocean_breeze.png" alt="Ocean Breeze Shake" width="100"><br>
+                A refreshing blend with a cool finish.
+              </td>
+              <td class="price">₱150</td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox" name="shake" value="Crimson Velvet Shake" data-price="150"></td>
+              <td>Crimson Velvet Shake</td>
+              <td>
+                <img src="../css/IMAGES/crimson_velvet.png" alt="Crimson Velvet Shake" width="100"><br>
+                Velvety red velvet flavor combined with creaminess.
+              </td>
+              <td class="price">₱150</td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox" name="shake" value="Matcha Shake" data-price="150"></td>
+              <td>Matcha Shake</td>
+              <td>
+                <img src="../css/IMAGES/matcha_shake.png" alt="Matcha Shake" width="100"><br>
+                Smooth, earthy matcha with a creamy finish.
+              </td>
+              <td class="price">₱150</td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox" name="shake" value="Mint Breeze Shake" data-price="150"></td>
+              <td>Mint Breeze Shake</td>
+              <td>
+                <img src="../css/IMAGES/mint_breeze.png" alt="Mint Breeze Shake" width="100"><br>
+                Refreshing mint with a sweet balance.
+              </td>
+              <td class="price">₱150</td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox" class="checkbox" name="shake" value="Lavender Dream Shake" data-price="150"></td>
+              <td>Lavender Dream Shake</td>
+              <td>
+                <img src="../css/IMAGES/lavender_dream.png" alt="Lavender Dream Shake" width="100"><br>
+                Floral-inspired lavender flavor for a dreamy treat.
+              </td>
+              <td class="price">₱150</td>
+            </tr>
+          </table>
+
+          <br><br><hr />
+          <button type="button" onclick="showSelections()">Next</button>
+        </form>
+      </div>
+
+      <div id="step2" style="display:none;">
+        <button type="button" onclick="goBackToStep1()">Back</button>
+        <h2><u>Confirm Your Selections</u></h2>
+        <table id="selectedShakesTable">
+          <tr>
+            <th>Shake</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </table>
+        <br><br>
+        <button type="button" onclick="placeOrder()">Place Order</button>
+      </div>
+
+      <div id="orderSummary" style="display:none;">
+        <h2><u>Order Summary</u></h2>
+        <table id="summaryTable">
+          <tr>
+            <th>Shake</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </table>
+        <p><strong>Total: ₱<span id="totalPrice">0.00</span></strong></p>
+        <hr />
+        <button type="button" onclick="finalOrder()">Order</button>
+      </div>
+    </section>
+  </div>
+  <script src="../js/script.js"></script>
+</body>
+</html>
