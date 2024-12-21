@@ -1,0 +1,158 @@
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('IMAGES/homebgL.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #184460;
+  padding: 10px 10px;
+  position: fixed;
+  width:100%;
+  z-index: 10;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 10px; 
+  line-height: 10px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.header a:hover {
+  background-color: #5A91B3;
+  color: black;
+}
+
+.header a.active {
+  background-color: #97BEDA;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+/*cycling home*/
+ #frost {
+   margin-left: 50px;
+   margin-right: 50px;
+   color: white;
+   text-align: center;
+   background: rgba(10, 33, 48, 0.54);
+   border-radius: 16px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+   border: 1px solid rgba(10, 33, 48, 0.3);
+   z-index: 1;
+}
+#menu{
+   margin-top: 50px;
+   margin-left: 40px;
+   margin-right: 40px;
+   color: white;
+   text-align: center;
+   background: rgba(10, 33, 48, 0.54);
+   border-radius: 16px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+   border: 1px solid rgba(10, 33, 48, 0.3);
+   z-index: 1;
+}
+table {
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td{
+  border-top: 1px black solid;
+}
+
+.price{
+  border-left: 1px black solid;
+}
+
+button {
+  padding: 10px 25px;
+  background-color: #5A91B3;
+  border-radius: 5px;
+  border: 1px solid #5A91B3;
+  box-shadow: 0 0 25px rgb(0,140,255);
+  color: white;
+}
+
+.checkbox {
+  appearance: none;
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  border: 2px solid black;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox::before {
+  font-family: "Quicksand", sans-serif;
+  position: absolute;
+  bottom: -4px;
+  left: 1px;
+  content: "✔";
+  font-size: 40px;
+  color: rgb(255, 153, 0);
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox:checked::before {
+  animation: zoom 0.5s ease-in-out;
+  transform: scale(1);
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1.5);
+  }
+
+  40% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  70% {
+    transform: scale(1.2);
+  }
+
+  90% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
